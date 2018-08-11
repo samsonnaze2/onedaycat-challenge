@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import PageHome from '../Pages/Home/index.jsx';
 import PageCart from '../Pages/Cart/index.jsx';
@@ -9,7 +9,7 @@ import Page404 from '../Pages/404/index.jsx';
 
 export const RouterList = ()=> {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Switch>
                 <Route exact path="/config" component={PageConfig} />
                 <Route exact path="/cart" component={PageCart} />
@@ -17,6 +17,6 @@ export const RouterList = ()=> {
                 <Route exact path="/home" component={PageHome} />
                 <Route path="*" component={Page404} />
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
